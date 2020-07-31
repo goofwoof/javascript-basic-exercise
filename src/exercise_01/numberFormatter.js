@@ -7,6 +7,16 @@ export default function formatNumber(number, option) {
   //
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
+  //start
+  var number_str = number. toFixed(2);
+  try {
+    if (option.currency){
+      number_str = '$ '+ number_str;
+    }
+  } catch (error) {
+  }
+  return number_str;
+  //end
 
-  throw new Error('Please delete this line and implement the function');
+  //throw new Error('Please delete this line and implement the function');
 }
